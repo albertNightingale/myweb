@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import React from 'react';
 
 class Project extends React.Component {
@@ -5,6 +6,13 @@ class Project extends React.Component {
     render() {
         return (
         <div>
+            <h1>Project</h1>
+            <h1>Project</h1>
+            <h1>Project</h1>
+            <h1>Project</h1>
+            <h1>Project</h1>
+            <h1>Project</h1>
+            <h1>Project</h1>
             <h1>Project</h1>
         </div>
         );

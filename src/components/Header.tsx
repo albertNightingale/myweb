@@ -13,7 +13,7 @@ class Header extends React.Component {
 
 
     getOtherPanels() {
-        const navItems = ["About", "Project", "Resume", "Contact"];
+        const navItems = ["Project", "Resume", "About", "Contact"];
         const linkStyle = {
             textDecoration: 'none',
             color: 'white',
@@ -35,33 +35,50 @@ class Header extends React.Component {
             </Box>);
     }
 
-    render() {
+    getNavBar() {
+        const boxStyle = {
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center'
+        }
 
+        const linkStyle = {
+            textDecoration: 'none',
+            color: 'white',
+        };
 
         return (
-            <Box sx={{ display: "flex" }}>
-                <AppBar component="nav"  >
-                    <Toolbar 
-                    sx={{
-                        display: 'flex', 
-                        justifyContent: 'space-between'
-                    }}>     
-                        <Box sx={{
-                            display: 'flex', 
-                            flexDirection: 'column', 
-                            alignItems: 'center'}}>
-                            <Avatar />
-                            <Typography
-                                component="div"
-                            >
-                                Albert Liu
-                            </Typography>
-                        </Box>
+            <Box sx={boxStyle}>
+                <Link href="/" sx={linkStyle}>
+                    <Avatar />
+                    <Typography
+                        component="div"
+                    >
+                        Albert Liu
+                    </Typography>
+                </Link>
+            </Box>);
+    }
 
-                        {this.getOtherPanels()}
-                    </Toolbar>
-                </AppBar>
-          </Box>
+    render() {
+        const appBarStyle = {
+            position: "relative", 
+            width:"100%", 
+            height:"20%",
+        };
+
+        return (
+        <AppBar component="nav" sx={appBarStyle}>
+            <Toolbar 
+            sx={{
+            display: 'flex', 
+            justifyContent: 'space-between'}}>     
+        
+            {this.getNavBar()}
+            {this.getOtherPanels()}
+        
+            </Toolbar>
+        </AppBar>
         );
     }
 }

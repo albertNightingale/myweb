@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/App';
 
+import './index.css';
+
 import {
   BrowserRouter,
   Route,
   Routes,
 } from "react-router-dom";
 
-import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Project from './components/pages/Project';
 import Contact from './components/pages/Contact';
@@ -23,13 +24,13 @@ root.render(
       <BrowserRouter> 
       <App >
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Project />} />
           <Route path="about" element={<About />} />
           <Route path="project" element={<Project />} />
           <Route path="contact" element={<Contact />}/>
           <Route path="resume" element={<Resume />}/>
         </Routes>
-        </App>
+      </App>
       </BrowserRouter>
   </React.StrictMode>
 );
