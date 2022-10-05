@@ -5,16 +5,38 @@ import {
     Button, 
     Typography, 
     Toolbar,
-    Box
+    Box,
+    Link
 } from '@mui/material';
 
-import { Link } from "react-router-dom";
-
-
 class Header extends React.Component {
+
+
+    getOtherPanels() {
+        const navItems = ["About", "Project", "Resume", "Contact"];
+        const linkStyle = {
+            textDecoration: 'none',
+            color: 'white',
+        };
+        const listOfNavs = navItems.map(
+            (item, index) => 
+            <Button key={item} >
+                <Link 
+                href={item.toLowerCase()} 
+                sx={linkStyle}>
+                    <Typography variant="caption" >
+                        {item.toLowerCase()}
+                    </Typography>
+                </Link>
+            </Button>
+        );
+        return (<Box>
+                {listOfNavs}
+            </Box>);
+    }
+
     render() {
 
-        const navItems = ["About", "Project", "Resume", "Contact"];
 
         return (
             <Box sx={{ display: "flex" }}>
@@ -35,19 +57,12 @@ class Header extends React.Component {
                                 Albert Liu
                             </Typography>
                         </Box>
-                        <Box>
-                        {navItems.map((item) => (
-                            <Button key={item} sx={{ color: "#fff" }}>
-                                {item}
-                                <Link to={item.toLowerCase()} />
-                            </Button>
-                        ))}
-                        </Box>
+
+                        {this.getOtherPanels()}
                     </Toolbar>
                 </AppBar>
           </Box>
         );
     }
 }
-
 export default Header;
