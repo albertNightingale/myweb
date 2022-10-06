@@ -10,10 +10,10 @@ import {
   Routes,
 } from "react-router-dom";
 
-import About from './components/pages/About';
-import Project from './components/pages/Project';
-import Contact from './components/pages/Contact';
-import Resume from './components/pages/Resume';
+import Blog from './pages/Blog';
+import Project from './pages/Project';
+import Contact from './pages/Contact';
+import Resume from './pages/Resume';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -25,7 +25,7 @@ root.render(
       <App >
         <Routes>
           <Route path="/" element={<Project />} />
-          <Route path="about" element={<About />} />
+          <Route path="blog" element={<Blog />} />
           <Route path="project" element={<Project />} />
           <Route path="contact" element={<Contact />}/>
           <Route path="resume" element={<Resume />}/>

@@ -13,7 +13,7 @@ class Header extends React.Component {
 
 
     getOtherPanels() {
-        const navItems = ["Project", "Resume", "About", "Contact"];
+        const navItems = ["Project", "Resume", "Blog", "Contact"];
         const linkStyle = {
             textDecoration: 'none',
             color: 'white',
