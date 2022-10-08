@@ -12,7 +12,7 @@ import {
 
 import Blog from './pages/Blog';
 import Project from './pages/Project';
-import Contact from './pages/Contact';
+import About from './pages/About';
 import Resume from './pages/Resume';
 
 const root = ReactDOM.createRoot(
@@ -27,7 +27,7 @@ root.render(
           <Route path="/" element={<Project />} />
           <Route path="blog" element={<Blog />} />
           <Route path="project" element={<Project />} />
-          <Route path="contact" element={<Contact />}/>
+          <Route path="About" element={<About />}/>
           <Route path="resume" element={<Resume />}/>
         </Routes>
       </App>

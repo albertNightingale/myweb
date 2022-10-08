@@ -13,7 +13,7 @@ class Header extends React.Component {
 
 
     getOtherPanels() {
-        const navItems = ["Project", "Resume", "Blog", "Contact"];
+        const navItems = ["Project", "Resume", "Blog", "About"];
         const linkStyle = {
             textDecoration: 'none',
             color: 'white',
@@ -50,7 +50,7 @@ class Header extends React.Component {
         return (
             <Box sx={boxStyle}>
                 <Link href="/" sx={linkStyle}>
-                    <Avatar />
+                    <Avatar alt="profile img" src="./img/profile.JPG"/>
                     <Typography
                         component="div"
                     >

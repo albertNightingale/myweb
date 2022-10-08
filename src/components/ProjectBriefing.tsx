@@ -9,7 +9,6 @@ export function ProjectBriefing(props: any) {
 
     return (
         <Card variant="outlined">
-            <React.Fragment>
                 <CardContent>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                         {project}
@@ -29,7 +28,6 @@ export function ProjectBriefing(props: any) {
                 <CardActions>
                     <Button size="small">Learn More</Button>
                 </CardActions>
-            </React.Fragment>
         </Card>
     );
 }
