@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardActions, CardContent, Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import React from 'react';
 
 import { ProjectBriefing } from '../components/ProjectBriefing';
@@ -9,7 +9,7 @@ class Project extends React.Component {
         
         const grid_arr = projectList.map((project) => {
             return (
-                <Grid item xs={6} sm={6} md={6}>
+                <Grid item xs={12} sm={6} md={4}>
                     <ProjectBriefing project={project} />
                 </Grid>
             )
@@ -21,11 +21,12 @@ class Project extends React.Component {
 
     render() {
         return (
-            <Grid container spacing={{ xs: 6, md: 6 }} columns={{ xs: 6, sm: 8, md: 12 }}>
+            <Grid container spacing={{ xs: 3 }} columns={{ xs: 12, sm: 12, md: 12}}>
                 {this.getGrid()}
             </Grid>
         );
     }
 }
+
 
 export default Project;
