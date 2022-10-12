@@ -1,85 +1,73 @@
-import React from 'react';
-import { 
-    AppBar, 
-    Avatar, 
-    Button, 
-    Typography, 
-    Toolbar,
-    Box,
-    Link
-} from '@mui/material';
+import React from "react";
+import {
+  AppBar,
+  Avatar,
+  Button,
+  Typography,
+  Toolbar,
+  Box,
+  Link,
+} from "@mui/material";
 
 class Header extends React.Component {
+  getOtherPanels() {
+    const navItems = ["Project", "Resume", "Blog", "About"];
+    const linkStyle = {
+      textDecoration: "none",
+      color: "white",
+    };
+    const listOfNavs = navItems.map((item, index) => (
+      <Button key={item}>
+        <Link href={item.toLowerCase()} sx={linkStyle}>
+          <Typography variant="caption">{item.toLowerCase()}</Typography>
+        </Link>
+      </Button>
+    ));
+    return <Box>{listOfNavs}</Box>;
+  }
 
+  getNavBar() {
+    const boxStyle = {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    };
 
-    getOtherPanels() {
-        const navItems = ["Project", "Resume", "Blog", "About"];
-        const linkStyle = {
-            textDecoration: 'none',
-            color: 'white',
-        };
-        const listOfNavs = navItems.map(
-            (item, index) => 
-            <Button key={item} >
-                <Link 
-                href={item.toLowerCase()} 
-                sx={linkStyle}>
-                    <Typography variant="caption" >
-                        {item.toLowerCase()}
-                    </Typography>
-                </Link>
-            </Button>
-        );
-        return (<Box>
-                {listOfNavs}
-            </Box>);
-    }
+    const linkStyle = {
+      textDecoration: "none",
+      color: "white",
+    };
 
-    getNavBar() {
-        const boxStyle = {
-            display: 'flex', 
-            flexDirection: 'column', 
-            alignItems: 'center'
-        }
+    return (
+      <Box sx={boxStyle}>
+        <Link href="/" sx={linkStyle}>
+          <Avatar alt="profile img" src="./img/profile.JPG" />
+          <Typography component="div">Albert Liu</Typography>
+        </Link>
+      </Box>
+    );
+  }
 
-        const linkStyle = {
-            textDecoration: 'none',
-            color: 'white',
-        };
+  render() {
+    const appBarStyle = {
+      position: "relative",
+      width: "100%",
+      height: "20%",
+    };
 
-        return (
-            <Box sx={boxStyle}>
-                <Link href="/" sx={linkStyle}>
-                    <Avatar alt="profile img" src="./img/profile.JPG"/>
-                    <Typography
-                        component="div"
-                    >
-                        Albert Liu
-                    </Typography>
-                </Link>
-            </Box>);
-    }
-
-    render() {
-        const appBarStyle = {
-            position: "relative", 
-            width:"100%", 
-            height:"20%",
-        };
-
-        return (
-        <AppBar component="nav" sx={appBarStyle}>
-            <Toolbar 
-            sx={{
-            display: 'flex', 
-            justifyContent: 'space-between'}}>     
-        
-            {this.getNavBar()}
-            {this.getOtherPanels()}
-        
-            </Toolbar>
-        </AppBar>
-        );
-    }
+    return (
+      <AppBar component="nav" sx={appBarStyle}>
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          {this.getNavBar()}
+          {this.getOtherPanels()}
+        </Toolbar>
+      </AppBar>
+    );
+  }
 }
 export default Header;

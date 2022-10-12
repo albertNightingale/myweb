@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import Header from './components/Header';
+import Header from "./components/Header";
 
-function App( props: any) {
+function App(props: any) {
   return (
     <div>
       <Header />
