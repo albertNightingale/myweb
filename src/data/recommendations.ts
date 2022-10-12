@@ -8,7 +8,7 @@ export interface Recommendation {
 }
 
 
-const recommendations: Recommendation[] = [
+const recommendationList: Recommendation[] = [
     {
         recommender: "Praharsh Parashara",
         recommendation: `It was a pleasure to mentor Albert during his Internship at Amazon in the summer of 2022. Albert was able to do a deep dive, and figure out the steps that were needed to solve a given problem and achieve the desired results.He prioritized his tasks according to the project timeline and showed curiosity to learn.He was open to feedback and incorporated that into his work. In the end, Albert learned about the react - redux framework from scratch and created a working UI that achieved the desired goal of the project, while maintaining the high bar that amazon has for any piece of code that's written. It was great to work with him on this project and I wish him all the best in his future endeavors.`,
@@ -37,4 +37,4 @@ const recommendations: Recommendation[] = [
     }
 ]
 
-export default recommendations;
+export default recommendationList;
