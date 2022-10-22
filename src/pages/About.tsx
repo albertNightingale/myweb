@@ -5,13 +5,21 @@ import {
   CardHeader,
   Container,
   Grid,
+  Link,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
   Stack,
   Typography,
 } from "@mui/material";
 import React from "react";
 
 import RecommendationCard from "../components/Recommendation";
+
 import recommendationList, { Recommendation } from "../data/recommendations";
+import projects, { Project } from "../data/projects";
+import experiences, { Experience } from "../data/experiences";
 
 class About extends React.Component {
   recommendationSection = () => {
@@ -40,7 +48,7 @@ class About extends React.Component {
   aboutMeSection = () => {
     return (
       <Box sx={{ display: "flex" }}>
-        <img src="./img/profile.JPG" alt="Flowers in Chania" width="25%" />
+        <img src="./img/profile.JPG" alt="profile" width="25%" />
         <Card sx={{ backgroundColor: "violet", width: "75%" }}>
           <CardHeader
             title={
@@ -62,11 +70,57 @@ class About extends React.Component {
     );
   };
 
+  onGoingProjectSections = () => {
+    const projectLists = projects
+      .filter((proj: Project) => proj.onGoing)
+      .map((proj: Project) => {
+        const links: JSX.Element[] = [];
+
+        if (proj.github) {
+          links.push(<Link href={proj.github}>Github</Link>);
+        }
+        if (proj.website) {
+          links.push(<Link href={proj.website}>Website</Link>);
+        }
+
+        const projectItem = (
+          <ListItem component="div" disablePadding>
+            <ListItemText>{proj.projectName}</ListItemText>
+            {links}
+          </ListItem>
+        );
+
+        return projectItem;
+      });
+
+    return (
+      <Box>
+        <Typography variant="h4" sx={{ color: "white" }}>
+          On Going Projects
+        </Typography>
+        <Box>
+          <List
+            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+          >
+            {projectLists}
+          </List>
+        </Box>
+      </Box>
+    );
+  };
+
+  pastExperiencesSections = () => {
+    const experienceComponents = experiences.map((experience: Experience) => {
+      return;
+    });
+  };
+
   render() {
     return (
       <Stack sx={{ backgroundColor: "black" }}>
         {this.aboutMeSection()}
         {this.recommendationSection()}
+        {this.onGoingProjectSections()}
       </Stack>
     );
   }
