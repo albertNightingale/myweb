@@ -6,9 +6,9 @@ frontend:
         - npm i
     build:
       commands:
-        - npm run build
+        - npm run prod
   artifacts:
-    baseDirectory: build
+    baseDirectory: build/static
     files:
       - '**/*'
   cache:
