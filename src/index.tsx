@@ -4,12 +4,7 @@ import App from "./App";
 
 import "./index.css";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-import Blog from "./pages/Blog";
-import Project from "./pages/Project";
-import About from "./pages/About";
-import Resume from "./pages/Resume";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,15 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App>
-        <Routes>
-          <Route path="/" element={<Project />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="project" element={<Project />} />
-          <Route path="About" element={<About />} />
-          <Route path="resume" element={<Resume />} />
-        </Routes>
-      </App>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
