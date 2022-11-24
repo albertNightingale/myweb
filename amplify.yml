@@ -8,7 +8,7 @@ frontend:
       commands:
         - npm run prod
   artifacts:
-    baseDirectory: build/static
+    baseDirectory: build
     files:
       - '**/*'
   cache:
