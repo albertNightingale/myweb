@@ -6,7 +6,7 @@ frontend:
         - npm i
     build:
       commands:
-        - npm run prod
+        - npm run build
   artifacts:
     baseDirectory: build
     files:
