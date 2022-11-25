@@ -27,13 +27,6 @@ const recommendationList: Recommendation[] = [
         Albert impressed me, so I asked if he would be interested in interning as a software developer on my team at Pure Storage. Although his assigned projects were more challenging and vastly different from school, Albert was able to quickly adapt and excel. I saw Albert's true strength as his determination to solve problems no matter the obstacle. He was always very focused and dedicated to his work; completing all of his projects on time, creatively solving issues along the way, and thoughtfully commenting on his code to assist any future developers. He did great work for our team, and I would undoubtedly hire him again.`,
         company: "Pure Storage Operation",
         role: "Cost Operations Manager",
-    },
-    {
-        recommender: "Test",
-        recommendation: `I met Albert when he was a high school senior doing a concurrent enrollment program at De Anza College. He was my programming assignment partner for CIS 22C (Data Structures in Java). Throughout our assignments and the final project, he demonstrated impressive knowledge in computer science and had strong leadership skills. While simultaneously coding the most difficult part of the project, Albert stepped up to lead the team and inspired his colleagues to produce top-quality work. 
-        Albert impressed me, so I asked if he would be interested in interning as a software developer on my team at Pure Storage. Although his assigned projects were more challenging and vastly different from school, Albert was able to quickly adapt and excel. I saw Albert's true strength as his determination to solve problems no matter the obstacle. He was always very focused and dedicated to his work; completing all of his projects on time, creatively solving issues along the way, and thoughtfully commenting on his code to assist any future developers. He did great work for our team, and I would undoubtedly hire him again.`,
-        company: "Test Company",
-        role: "Test Role",
     }
 ]
 

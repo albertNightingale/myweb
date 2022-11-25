@@ -1,5 +1,5 @@
 import { Grid, Card, CardHeader, CardContent, Typography } from "@mui/material";
-import { Recommendation } from "../data/recommendations";
+import { Recommendation } from "../../data/recommendations";
 
 type PropType = {
   recommendation: Recommendation;

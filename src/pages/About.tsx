@@ -3,23 +3,23 @@ import {
   Card,
   CardContent,
   CardHeader,
-  Container,
   Grid,
   Link,
   List,
   ListItem,
-  ListItemButton,
   ListItemText,
   Stack,
   Typography,
 } from "@mui/material";
 import React from "react";
 
-import RecommendationCard from "../components/Recommendation";
+import RecommendationCard from "./About/Recommendation";
 
 import recommendationList, { Recommendation } from "../data/recommendations";
 import projects, { Project } from "../data/projects";
 import experiences, { Experience } from "../data/experiences";
+import SectionTitle from "../components/SectionTitle";
+import PastExperience from "./About/PastExperience";
 
 class About extends React.Component {
   recommendationSection = () => {
@@ -111,8 +111,14 @@ class About extends React.Component {
 
   pastExperiencesSections = () => {
     const experienceComponents = experiences.map((experience: Experience) => {
-      return;
+      return <PastExperience experience={experience} />;
     });
+    return (
+      <Box>
+        <SectionTitle sectionName="Past Experiences" />
+        {experienceComponents}
+      </Box>
+    );
   };
 
   render() {
@@ -121,6 +127,7 @@ class About extends React.Component {
         {this.aboutMeSection()}
         {this.recommendationSection()}
         {this.onGoingProjectSections()}
+        {this.pastExperiencesSections()}
       </Stack>
     );
   }

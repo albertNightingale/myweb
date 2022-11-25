@@ -7,7 +7,7 @@ export interface Project {
 }
 
 
-const recommendationList: Project[] = [
+const projectList: Project[] = [
     {
         onGoing: true,
         projectName: "Albert's portfolio",
@@ -21,4 +21,4 @@ const recommendationList: Project[] = [
     }
 ]
 
-export default recommendationList;
+export default projectList;
