@@ -1,11 +1,8 @@
 import React from "react";
-import { Card, CardHeader, CardContent, Typography } from "@mui/material";
-import { Experience } from "../../data/experiences";
+import { Card, CardHeader, CardContent, Typography, Box } from "@mui/material";
+import experiences, { Experience } from "../../data/experiences";
 import KeyValueContent from "../../components/KeyValueContent";
-
-type ExperienceProp = {
-  experience: Experience;
-};
+import SectionTitle from "../../components/SectionTitle";
 
 function addKeyValueContents(experience: Experience) {
   const contents = new Array<JSX.Element>();
@@ -35,7 +32,7 @@ function addKeyValueContents(experience: Experience) {
   return contents;
 }
 
-export default function PastExperience({ experience }: ExperienceProp) {
+function getPastExperience(experience: Experience) {
   return (
     <Card sx={{ backgroundColor: "blue" }}>
       <CardHeader
@@ -55,5 +52,16 @@ export default function PastExperience({ experience }: ExperienceProp) {
         </Typography>
       </CardContent>
     </Card>
+  );
+}
+
+export default function PastExperience(props: any) {
+  return (
+    <Box>
+      <SectionTitle sectionName="Past Experiences" />
+      {experiences.map((experience: Experience) => {
+        return getPastExperience(experience);
+      })}
+    </Box>
   );
 }

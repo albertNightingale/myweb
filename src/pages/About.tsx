@@ -20,6 +20,8 @@ import projects, { Project } from "../data/projects";
 import experiences, { Experience } from "../data/experiences";
 import SectionTitle from "../components/SectionTitle";
 import PastExperience from "./About/PastExperience";
+import AboutMe from "./About/AboutMe";
+import OnGoingProjects from "./About/OnGoingProjects";
 
 class About extends React.Component {
   recommendationSection = () => {
@@ -45,89 +47,13 @@ class About extends React.Component {
     );
   };
 
-  aboutMeSection = () => {
-    return (
-      <Box sx={{ display: "flex" }}>
-        <img src="./img/profile.JPG" alt="profile" width="25%" />
-        <Card sx={{ backgroundColor: "violet", width: "75%" }}>
-          <CardHeader
-            title={
-              <Typography sx={{ fontSize: "100px" }}>Albert Liu</Typography>
-            }
-            subheader={
-              <Typography sx={{ fontSize: "20px" }}>
-                CS New Grad from University of Utah
-              </Typography>
-            }
-          />
-          <CardContent>
-            <Typography variant="body1" sx={{ color: "white" }}>
-              some stuff goes here.
-            </Typography>
-          </CardContent>
-        </Card>
-      </Box>
-    );
-  };
-
-  onGoingProjectSections = () => {
-    const projectLists = projects
-      .filter((proj: Project) => proj.onGoing)
-      .map((proj: Project) => {
-        const links: JSX.Element[] = [];
-
-        if (proj.github) {
-          links.push(<Link href={proj.github}>Github</Link>);
-        }
-        if (proj.website) {
-          links.push(<Link href={proj.website}>Website</Link>);
-        }
-
-        const projectItem = (
-          <ListItem component="div" disablePadding>
-            <ListItemText>{proj.projectName}</ListItemText>
-            {links}
-          </ListItem>
-        );
-
-        return projectItem;
-      });
-
-    return (
-      <Box>
-        <Typography variant="h4" sx={{ color: "white" }}>
-          On Going Projects
-        </Typography>
-        <Box>
-          <List
-            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-          >
-            {projectLists}
-          </List>
-        </Box>
-      </Box>
-    );
-  };
-
-  pastExperiencesSections = () => {
-    const experienceComponents = experiences.map((experience: Experience) => {
-      return <PastExperience experience={experience} />;
-    });
-    return (
-      <Box>
-        <SectionTitle sectionName="Past Experiences" />
-        {experienceComponents}
-      </Box>
-    );
-  };
-
   render() {
     return (
       <Stack sx={{ backgroundColor: "black" }}>
-        {this.aboutMeSection()}
+        <AboutMe />
         {this.recommendationSection()}
-        {this.onGoingProjectSections()}
-        {this.pastExperiencesSections()}
+        <OnGoingProjects />
+        <PastExperience />
       </Stack>
     );
   }
