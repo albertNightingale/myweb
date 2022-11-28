@@ -32,7 +32,10 @@ function addKeyValueContents(experience: Experience) {
   return contents;
 }
 
-function getPastExperience(experience: Experience) {
+interface pastExperienceComponentProp {
+  experience: Experience;
+}
+function PastExperienceComponent({ experience }: pastExperienceComponentProp) {
   return (
     <Card sx={{ backgroundColor: "blue" }}>
       <CardHeader
@@ -55,13 +58,14 @@ function getPastExperience(experience: Experience) {
   );
 }
 
-export default function PastExperience(props: any) {
+export default function PastExperienceSection(props: any) {
+  const experiencesComponentList = experiences.map((experience: Experience) => {
+    return <PastExperienceComponent experience={experience} />;
+  });
   return (
     <Box>
       <SectionTitle sectionName="Past Experiences" />
-      {experiences.map((experience: Experience) => {
-        return getPastExperience(experience);
-      })}
+      {experiencesComponentList}
     </Box>
   );
 }

@@ -1,22 +1,13 @@
-import React from "react";
-import {
-  Box,
-  Card,
-  CardHeader,
-  CardContent,
-  Typography,
-  ListItemText,
-  ListItem,
-} from "@mui/material";
+import { ListItem, ListItemText } from "@mui/material";
 import { Project } from "../data/projects";
 
-type onGoingProjectProps = {
+interface onGoingProjectProps {
   project: Project;
   children?: React.ReactNode; // best, accepts everything React can render
   childrenElement?: JSX.Element; // A single React element
-};
+}
 
-export default function ProjectComponent({
+export default function ProjectListItem({
   project,
   children,
 }: onGoingProjectProps) {
