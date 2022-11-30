@@ -1,10 +1,29 @@
 import React from "react";
-import { Box, Link, List } from "@mui/material";
+import { Box, Link, List, ListItem, ListItemText } from "@mui/material";
 
 import projects, { Project as ProjectType } from "../../data/projects";
 
 import SectionTitle from "../../components/SectionTitle";
-import ProjectListItem from "../../components/ProjectListItem";
+
+
+interface onGoingProjectProps {
+  project: ProjectType;
+  children?: React.ReactNode; // best, accepts everything React can render
+  childrenElement?: JSX.Element; // A single React element
+}
+
+function ProjectListItem({
+  project,
+  children,
+}: onGoingProjectProps) {
+  return (
+    <ListItem component="div" disablePadding>
+      <ListItemText>{project.projectName}</ListItemText>
+      {children}
+    </ListItem>
+  );
+}
+
 
 function mapOnGoingProjects() {
   const projectLists = projects
