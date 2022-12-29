@@ -63,7 +63,7 @@ const projectList: Project[] = [
         github: "https://capstone-cs.eng.utah.edu/groups/caps/-/wikis/CAPS",
         website: "https://capstone-cs.eng.utah.edu/groups/caps/-/wikis/CAPS",
         stack: ["Java"],
-        description: "A mini project that I worked on to help my friend's business by formatting and organizing the client's information and uploading it to Mailchimp. Mailchimp is a tool that will send out emails to the clients that have been uploaded."
+        description: "A mini project that I worked on to help my friend's business by formatting and organizing the client's information and uploading it to Mailchimp. Mailchimp is a tool that will send out emails to the clients that have been uploaded.A mini project that I worked on to help my friend's business by formatting and organizing the client's information and uploading it to Mailchimp. Mailchimp is a tool that will send out emails to the clients that have been uploaded.A mini project that I worked on to help my friend's business by formatting and organizing the client's information and uploading it to Mailchimp. Mailchimp is a tool that will send out emails to the clients that have been uploaded.A mini project that I worked on to help my friend's business by formatting and organizing the client's information and uploading it to Mailchimp. Mailchimp is a tool that will send out emails to the clients that have been uploaded.A mini project that I worked on to help my friend's business by formatting and organizing the client's information and uploading it to Mailchimp. Mailchimp is a tool that will send out emails to the clients that have been uploaded."
     }
 ]
 
