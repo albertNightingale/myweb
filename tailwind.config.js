@@ -4,6 +4,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    letterSpacing: {
+      widest: '0.25em'
+    },
   },
   plugins: [],
 }
