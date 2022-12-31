@@ -8,6 +8,7 @@ import {
   Box,
   Link,
 } from "@mui/material";
+import profileIcon from "./profile.JPG";
 
 class Header extends React.Component {
   getOtherPanels() {
@@ -41,7 +42,7 @@ class Header extends React.Component {
     return (
       <Box sx={boxStyle}>
         <Link href="/" sx={linkStyle}>
-          <Avatar alt="profile img" src="./img/profile.JPG" />
+          <Avatar alt="profile img" src={profileIcon} />
           <Typography component="div">Albert Liu</Typography>
         </Link>
       </Box>
