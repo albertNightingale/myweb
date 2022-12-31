@@ -1,20 +1,25 @@
 import React from "react";
+import { Box, Card, CardHeader, CardContent, Typography } from "@mui/material";
 
 export default function AboutMe(props: any) {
   return (
-    <div className="flex flex-row bg-red-500">
+    <Box sx={{ display: "flex" }}>
       <img src="./img/profile.JPG" alt="profile" width="25%" />
-      <div className="flex flex-col font-mono pl-2">
-        <div className="text-8xl font-bold text-zinc-900 tracking-widest">
-          Albert Liu
-        </div>
-        <div className="text-3xl text-zinc-600/100">
-          Graduated from University of Utah
-        </div>
-        <div className="text-base">
-          Some more description about me goes here
-        </div>
-      </div>
-    </div>
+      <Card sx={{ backgroundColor: "violet", width: "75%" }}>
+        <CardHeader
+          title={<Typography sx={{ fontSize: "100px" }}>Albert Liu</Typography>}
+          subheader={
+            <Typography sx={{ fontSize: "20px" }}>
+              CS New Grad from University of Utah
+            </Typography>
+          }
+        />
+        <CardContent>
+          <Typography variant="body1" sx={{ color: "white" }}>
+            some stuff goes here.
+          </Typography>
+        </CardContent>
+      </Card>
+    </Box>
   );
 }

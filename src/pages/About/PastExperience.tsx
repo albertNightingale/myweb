@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, CardHeader, CardContent, Typography, Box } from "@mui/material";
 import experiences, { Experience } from "../../data/experiences";
 import KeyValueContent from "../../components/KeyValueContent";
 import SectionTitle from "../../components/SectionTitle";
@@ -36,12 +37,24 @@ interface pastExperienceComponentProp {
 }
 function PastExperienceComponent({ experience }: pastExperienceComponentProp) {
   return (
-    <div className="flex flex-col bg-amber-800 p-2 rounded-md">
-      <h3 className="text-3xl text-sky-500">{experience.title}</h3>
-      <h4 className="text-xl text-sky-300">@ {experience.orgName}</h4>
-      {addKeyValueContents(experience)}
-      <p className="text-base text-sky-500">{experience.description}</p>
-    </div>
+    <Card sx={{ backgroundColor: "blue" }}>
+      <CardHeader
+        title={
+          <Typography sx={{ fontSize: "25px" }}>{experience.title}</Typography>
+        }
+        subheader={
+          <Typography sx={{ fontSize: "20px" }}>
+            in {experience.orgName}{" "}
+          </Typography>
+        }
+      />
+      <CardContent>
+        {addKeyValueContents(experience)}
+        <Typography variant="body1" sx={{ color: "white" }}>
+          {experience.description}
+        </Typography>
+      </CardContent>
+    </Card>
   );
 }
 
@@ -50,9 +63,9 @@ export default function PastExperienceSection(props: any) {
     return <PastExperienceComponent experience={experience} />;
   });
   return (
-    <div className="flex flex-col bg-orange-400">
+    <Box>
       <SectionTitle sectionName="Past Experiences" />
-      <div className="space-y-2 ">{experiencesComponentList}</div>
-    </div>
+      {experiencesComponentList}
+    </Box>
   );
 }
