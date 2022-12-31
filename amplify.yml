@@ -9,7 +9,7 @@ frontend:
         - npm run build
         - cp -rf public/img build/static/img
   artifacts:
-    baseDirectory: build/static
+    baseDirectory: build
     files:
       - '**/*'
   cache:
