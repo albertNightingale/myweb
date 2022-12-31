@@ -12,7 +12,7 @@ import profileIcon from "./profile.JPG";
 
 class Header extends React.Component {
   getOtherPanels() {
-    const navItems = ["Project", "Resume", "Blog", "About"];
+    const navItems = ["Project", "Blog", "About"];
     const linkStyle = {
       textDecoration: "none",
       color: "white",
