@@ -18,7 +18,7 @@ class Header extends React.Component {
     };
     const listOfNavs = navItems.map((item, index) => (
       <Button key={item}>
-        <Link href={`${item.toLowerCase()}`} sx={linkStyle}>
+        <Link href={`/${item.toLowerCase()}`} sx={linkStyle}>
           <Typography variant="caption">{item.toLowerCase()}</Typography>
         </Link>
       </Button>
