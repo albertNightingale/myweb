@@ -37,11 +37,13 @@ class Header extends React.Component {
       textDecoration: "none",
       color: "white",
     };
-
     return (
       <Box sx={boxStyle}>
         <Link href="/" sx={linkStyle}>
-          <Avatar alt="profile img" src="./img/profile.JPG" />
+          <Avatar
+            alt="profile img"
+            src={`${process.env.PUBLIC_URL}/img/profile.JPG`}
+          />
           <Typography component="div">Albert Liu</Typography>
         </Link>
       </Box>

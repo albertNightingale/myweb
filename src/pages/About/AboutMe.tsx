@@ -3,7 +3,11 @@ import React from "react";
 export default function AboutMe(props: any) {
   return (
     <div className="flex flex-row bg-red-500">
-      <img src="./img/profile.JPG" alt="profile" width="25%" />
+      <img
+        src={`${process.env.PUBLIC_URL}/img/profile.JPG`}
+        alt="profile"
+        width="25%"
+      />
       <div className="flex flex-col font-mono pl-2">
         <div className="text-8xl font-bold text-zinc-900 tracking-widest">
           Albert Liu
