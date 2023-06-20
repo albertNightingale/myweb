@@ -3,9 +3,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
-    letterSpacing: {
-      widest: '0.25em'
+    extend: {
+      colors: {
+        "theme": "#1976d3",
+      },
+      letterSpacing: {
+        widest: '0.25em'
+      },
     },
   },
   plugins: [],
