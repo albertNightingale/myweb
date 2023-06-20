@@ -25,7 +25,7 @@ export default function OnGoingProjectsSection() {
   return (
     <div className="bg-theme1 pb-3">
       <SectionTitle sectionName="On Going Projects" />
-      <div className="pt-2 grid grid-cols-5 gap-10 px-10">{onGoingProjectComponent}</div>
+      <div className="grid grid-cols-5 gap-10 px-10">{onGoingProjectComponent}</div>
     </div>
   );
 }

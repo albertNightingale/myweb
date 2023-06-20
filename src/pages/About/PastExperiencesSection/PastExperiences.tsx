@@ -8,9 +8,9 @@ export default function PastExperienceSection() {
     return <PastExperienceComponent experience={experience} />;
   });
   return (
-    <div className="flex flex-col bg-orange-400">
+    <div className="flex flex-col bg-theme0 pb-10">
       <SectionTitle sectionName="Past Experiences" />
-      <div className="space-y-2 ">{experiencesComponentList}</div>
+      <div className="grid grid-cols-2 gap-5 px-3">{experiencesComponentList}</div>
     </div>
   );
 }

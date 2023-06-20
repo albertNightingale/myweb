@@ -8,20 +8,20 @@ interface pastExperienceComponentProp {
 
 function addKeyValueContents(experience: Experience) {
   const contents = new Array<JSX.Element>();
-  contents.push(<KeyValueContent inline={true} fieldName={'Experience Type'} fieldValue={experience.type} />);
-  contents.push(<KeyValueContent inline={true} fieldName={'Starting Since'} fieldValue={experience.startDate} />);
+  contents.push(<KeyValueContent styleClass={'pl-3'} fieldName={'Experience Type'} fieldValue={experience.type} />);
+  contents.push(<KeyValueContent styleClass={'pl-3'} fieldName={'Starting Since'} fieldValue={experience.startDate} />);
   if (experience.endDate) {
-    contents.push(<KeyValueContent inline={true} fieldName={'Ending At'} fieldValue={experience.endDate} />);
+    contents.push(<KeyValueContent styleClass={'pl-3'} fieldName={'Ending At'} fieldValue={experience.endDate} />);
   }
   return contents;
 }
 export default function PastExperienceComponent({ experience }: pastExperienceComponentProp) {
   return (
-    <div className="flex flex-col bg-amber-800 p-2 rounded-md">
-      <h3 className="text-3xl text-sky-500">{experience.title}</h3>
-      <h4 className="text-xl text-sky-300">@ {experience.orgName}</h4>
+    <div className="flex flex-col bg-theme1 p-2 rounded-3xl">
+      <h3 className="text-3xl pl-3">{experience.title}</h3>
+      <h4 className="text-xl pl-3">@ {experience.orgName}</h4>
       {addKeyValueContents(experience)}
-      <p className="text-base text-sky-500">{experience.description}</p>
+      <p className="pt-5 pl-3 text-base text-[#5A5A5A]">{experience.description}</p>
     </div>
   );
 }
