@@ -1,1 +1,1 @@
-export {default} from "./OnGoingProjects";
+export { default } from './OnGoingProjects';

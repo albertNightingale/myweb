@@ -1,6 +1,6 @@
-import React from "react";
-import projects, { Project } from "../../data/projects";
-import { Link } from "react-router-dom";
+import React from 'react';
+import projects, { Project } from '../../data/projects';
+import { Link } from 'react-router-dom';
 
 function onClickProject(
   event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
@@ -27,7 +27,7 @@ function ProjectBriefing({ projectSetter, project }: ProjectProps) {
   // process descriptions, stop it after 200 characters
   let description = project.description;
   if (project.description.length > 200) {
-    description = project.description.slice(0, 200) + "...";
+    description = project.description.slice(0, 200) + '...';
   }
 
   return (
@@ -36,7 +36,7 @@ function ProjectBriefing({ projectSetter, project }: ProjectProps) {
       <div className="text-base text-neutral-500">{subtitle}</div>
       <div className="text-sm">{description}</div>
       <div className="border-t-4 mt-auto flex flex-row">
-        <Link className="hover:bg-indigo-500/50 basis-1/2 text-center" to={""}>
+        <Link className="hover:bg-indigo-500/50 basis-1/2 text-center" to={''}>
           Project Website
         </Link>
         <button
@@ -58,13 +58,7 @@ export default function ProjectGrids({
   popUpProjectSetter: React.Dispatch<React.SetStateAction<null | Project>>;
 }) {
   const grids = projects.map((project: Project) => {
-    return (
-      <ProjectBriefing
-        key={`${project.projectName}`}
-        project={project}
-        projectSetter={popUpProjectSetter}
-      />
-    );
+    return <ProjectBriefing key={`${project.projectName}`} project={project} projectSetter={popUpProjectSetter} />;
   });
 
   return <div className="grid grid-cols-2 gap-4">{grids}</div>;

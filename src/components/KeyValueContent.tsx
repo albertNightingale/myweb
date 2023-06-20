@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import React from 'react';
+import { Box, Grid, Typography } from '@mui/material';
 
 type propType = {
   inline: boolean;
@@ -7,22 +7,18 @@ type propType = {
   fieldValue: string;
 };
 
-const fieldNameStyle = { color: "yellow", display: "inline" };
-const fieldValueStyle = { color: "white", display: "inline" };
+const fieldNameStyle = { color: 'yellow', display: 'inline' };
+const fieldValueStyle = { color: 'white', display: 'inline' };
 
-export default function KeyValueContent({
-  inline,
-  fieldName,
-  fieldValue,
-}: propType) {
-  const boxStyle = inline ? "inline" : "block";
+export default function KeyValueContent({ inline, fieldName, fieldValue }: propType) {
+  const boxStyle = inline ? 'inline' : 'block';
   return (
     <Box sx={{ display: boxStyle }}>
       <Typography variant="body1" sx={fieldNameStyle}>
-        {fieldName + "  "}
+        {fieldName + '  '}
       </Typography>
       <Typography variant="body1" sx={fieldValueStyle}>
-        {fieldValue + "  "}
+        {fieldValue + '  '}
       </Typography>
     </Box>
   );
