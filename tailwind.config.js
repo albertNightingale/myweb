@@ -5,7 +5,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "theme": "#1976d3",
+        "theme0": "#1976d3",
+        "theme1": "#b5daff",
+        "texttheme": "#fafafa"
       },
       letterSpacing: {
         widest: '0.25em'

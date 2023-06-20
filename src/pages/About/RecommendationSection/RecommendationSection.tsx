@@ -9,7 +9,7 @@ export default function RecommendationSection() {
     }
   );
   return (
-    <div className="flex flex-col bg-theme">
+    <div className="flex flex-col bg-theme0">
       <SectionTitle sectionName="Recommendations" />
       <div className="px-3 pb-3 grid grid-cols-3 gap-4">
         {recommendationComponentList}
