@@ -1,17 +1,14 @@
-import React, { useState } from "react";
-import ProjectGrids from "./Project/ProjectGrids";
-import ProjectDetailPopUp from "./Project/ProjectDetailPopUp";
+import React, { useState } from 'react';
+import ProjectGrids from './Project/ProjectGrids';
+import ProjectDetailPopUp from './Project/PopUp/';
 
-export default function Project(props: any) {
+export default function Project() {
   const [popupProject, setPopUpProject] = useState(null);
 
   if (popupProject !== null) {
     return (
       <div>
-        <ProjectDetailPopUp
-          project={popupProject}
-          closeProjectCB={() => setPopUpProject(null)}
-        />
+        <ProjectDetailPopUp project={popupProject} closeProjectCB={() => setPopUpProject(null)} />
         <ProjectGrids popUpProjectSetter={setPopUpProject as any} />
       </div>
     );

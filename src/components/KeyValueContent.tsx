@@ -1,29 +1,16 @@
-import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import React from 'react';
 
 type propType = {
-  inline: boolean;
+  styleClass: string;
   fieldName: string;
   fieldValue: string;
 };
 
-const fieldNameStyle = { color: "yellow", display: "inline" };
-const fieldValueStyle = { color: "white", display: "inline" };
-
-export default function KeyValueContent({
-  inline,
-  fieldName,
-  fieldValue,
-}: propType) {
-  const boxStyle = inline ? "inline" : "block";
+export default function KeyValueContent({ styleClass, fieldName, fieldValue }: propType) {
   return (
-    <Box sx={{ display: boxStyle }}>
-      <Typography variant="body1" sx={fieldNameStyle}>
-        {fieldName + "  "}
-      </Typography>
-      <Typography variant="body1" sx={fieldValueStyle}>
-        {fieldValue + "  "}
-      </Typography>
-    </Box>
+    <div className={styleClass}>
+      <span className="text-[#909090]">{fieldName}: </span>
+      <span className="text-[#0f0f0f]">{fieldValue}</span>
+    </div>
   );
 }

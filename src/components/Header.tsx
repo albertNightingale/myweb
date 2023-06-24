@@ -1,20 +1,12 @@
-import React from "react";
-import {
-  AppBar,
-  Avatar,
-  Button,
-  Typography,
-  Toolbar,
-  Box,
-  Link,
-} from "@mui/material";
+import React from 'react';
+import { AppBar, Avatar, Button, Typography, Toolbar, Box, Link } from '@mui/material';
 
 class Header extends React.Component {
   getOtherPanels() {
-    const navItems = ["Project", "Blog", "About"];
+    const navItems = ['Project', 'Blog', 'About'];
     const linkStyle = {
-      textDecoration: "none",
-      color: "white",
+      textDecoration: 'none',
+      color: 'white',
     };
     const listOfNavs = navItems.map((item, index) => (
       <Button key={item}>
@@ -28,22 +20,19 @@ class Header extends React.Component {
 
   getNavBar() {
     const boxStyle = {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
     };
 
     const linkStyle = {
-      textDecoration: "none",
-      color: "white",
+      textDecoration: 'none',
+      color: 'white',
     };
     return (
       <Box sx={boxStyle}>
         <Link href="/" sx={linkStyle}>
-          <Avatar
-            alt="profile img"
-            src={`${process.env.PUBLIC_URL}/img/profile.JPG`}
-          />
+          <Avatar alt="profile img" src={`${process.env.PUBLIC_URL}/img/profile.JPG`} />
           <Typography component="div">Albert Liu</Typography>
         </Link>
       </Box>
@@ -52,17 +41,17 @@ class Header extends React.Component {
 
   render() {
     const appBarStyle = {
-      position: "relative",
-      width: "100%",
-      height: "20%",
+      position: 'relative',
+      width: '100%',
+      height: '20%',
     };
 
     return (
       <AppBar component="nav" sx={appBarStyle}>
         <Toolbar
           sx={{
-            display: "flex",
-            justifyContent: "space-between",
+            display: 'flex',
+            justifyContent: 'space-between',
           }}
         >
           {this.getNavBar()}

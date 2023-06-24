@@ -14,10 +14,11 @@ const projectList: Project[] = [
     {
         onGoing: true,
         startingDate: "October 2022",
-        projectName: "My portfolio",
+        projectName: "My Portfolio",
         github: "https://github.com/albertNightingale/myweb",
+        website: "https://www.Albertliu.link",
         stack: ["TypeScript", "React", "Material-UI"],
-        description: "portfolio project that I put together to host my projects, experiences, and skills. I am currently working on this project and will be adding more features to it in the future."
+        description: "portfolio project that I put together to showcase my projects, experiences, and skills. I am currently working on this project and will be adding more features to it in the future."
     },
     {
         onGoing: true,
@@ -57,7 +58,7 @@ const projectList: Project[] = [
         description: "A multiplayer browser game built with NodeJS. The game is a 2D top down shooter game. The game is built with a client-server architecture.",
     },
     {
-        onGoing: true,
+        onGoing: false,
         projectName: "Mailchimp Uploader",
         startingDate: "Sept 2022",
         github: "https://capstone-cs.eng.utah.edu/groups/caps/-/wikis/CAPS",
