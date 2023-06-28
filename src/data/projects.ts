@@ -9,7 +9,6 @@ export interface Project {
     description: string;
 }
 
-
 const projectList: Project[] = [
     {
         onGoing: true,
