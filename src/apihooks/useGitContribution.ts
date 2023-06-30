@@ -3,10 +3,9 @@ import { useQuery } from 'react-query';
 export default () => {
   const {
     data, isLoading, error,
-  } = useQuery('fetch', async () => {
-    const response = await fetch(`${process.env.REACT_APP_PROTOCOL}://${process.env.REACT_APP_IP}/githubcontribution`);
-    const jsonData = await response.json();
-    return jsonData.data;
+  } = useQuery('fetch github contribution', async () => {
+    return fetch(`${process.env.REACT_APP_PROTOCOL}://${process.env.REACT_APP_IP}/githubContribution`, { method: "GET" })
+      .then((response) => response.json());
   });
 
   return {

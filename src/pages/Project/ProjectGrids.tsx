@@ -1,7 +1,7 @@
 import React from 'react';
-import { Project } from '../../data/projects';
 import ProjectBriefing from './ProjectBriefing';
 import useProjects from '../../apihooks/useProjects';
+import { Project } from '../../types';
 
 export default function ProjectGrids({
   popUpProjectSetter,
@@ -18,7 +18,7 @@ export default function ProjectGrids({
     return <div>Error: {error.toString()}</div>;
   }
 
-  const grids = data.map((project: Project) => {
+  const grids = (data as any).map((project: Project) => {
     return <ProjectBriefing key={`${project.projectName}`} project={project} projectSetter={popUpProjectSetter} />;
   });
 

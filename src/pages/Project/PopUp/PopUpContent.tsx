@@ -1,5 +1,5 @@
 import React from 'react';
-import { Project } from '../../../data/projects';
+import { Project } from '../../../types';
 
 export default function ProjectDetailPopUp({ project }: { project: Project }) {
   return (

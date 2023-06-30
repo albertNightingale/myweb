@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import projects, { Project as ProjectType } from '../../../data/projects';
+import { Project } from '../../../types';
 
 interface onGoingProjectProps {
-  project: ProjectType | null;
+  project: Project | null;
   children?: React.ReactNode; // best, accepts everything React can render
 }
 
 export default function ProjectListItem({ project }: onGoingProjectProps) {
   return (
-    <div className="bg-theme0 rounded-3xl">
+    <div className="bg-theme0 rounded-3xl" key={project ? project.projectName : ''}>
       <div className="font-semibold text-texttheme text-center pt-2 pb-5">
         {project ? project.projectName : 'Coming Soon...'}
       </div>
