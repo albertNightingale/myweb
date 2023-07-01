@@ -1,1 +1,1 @@
-export {default} from './PastExperiences';
+export { default } from './PastExperiencesSection';

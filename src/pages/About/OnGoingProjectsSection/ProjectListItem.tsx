@@ -8,7 +8,7 @@ interface onGoingProjectProps {
 
 export default function ProjectListItem({ project }: onGoingProjectProps) {
   return (
-    <div className="bg-theme0 rounded-3xl" key={project ? project.projectName : ''}>
+    <div className="bg-theme0 rounded-3xl">
       <div className="font-semibold text-texttheme text-center pt-2 pb-5">
         {project ? project.projectName : 'Coming Soon...'}
       </div>

@@ -5,7 +5,7 @@ import PastExperienceComponent from './PastExperienceComponent';
 
 export default function PastExperienceSection() {
   const experiencesComponentList = experiences.map((experience: Experience) => {
-    return <PastExperienceComponent experience={experience} />;
+    return <PastExperienceComponent key={`${experience.title}@${experience.orgName}`} experience={experience} />;
   });
   return (
     <div className="flex flex-col bg-theme0 pb-10">

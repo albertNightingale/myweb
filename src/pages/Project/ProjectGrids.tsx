@@ -10,7 +10,7 @@ export default function ProjectGrids({
 }) {
   const { data, error, isLoading } = useProjects();
 
-  if (isLoading || !data) {
+  if (isLoading) {
     return <div>Loading...</div>;
   }
 
