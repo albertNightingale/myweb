@@ -1,4 +1,3 @@
-import { Stack } from '@mui/material';
 import React from 'react';
 
 import RecommendationSection from './About/RecommendationSection';
@@ -8,11 +7,11 @@ import OnGoingProjectsSection from './About/OnGoingProjectsSection';
 
 export default function About(props: any) {
   return (
-    <Stack sx={{ backgroundColor: 'black' }}>
+    <div className="bg-black">
       <AboutMeSection />
       <RecommendationSection />
       <OnGoingProjectsSection />
       <PastExperienceSection />
-    </Stack>
+    </div>
   );
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Project } from '../../../types';
-import SectionTitle from '../../../components/SectionTitle';
+import { Project } from '../../../../types';
+import SectionTitle from '../../../SectionTitle';
 import ProjectListItem from './ProjectListItem';
-import useProjects from '../../../apihooks/useProjects';
+import useProjects from '../../../../apihooks/useProjects';
 
 function mapOnGoingProjects(projects: Project[]) {
   const projectLists = projects

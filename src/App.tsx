@@ -3,9 +3,9 @@ import React from 'react';
 import Header from './components/Header';
 import { Route, Routes } from 'react-router-dom';
 
-import Blog from './pages/Blog';
-import Project from './pages/Project';
-import About from './pages/About';
+import Blog from './components/pages/Blog';
+import Project from './components/pages/Project';
+import About from './components/pages/About';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 function App() {

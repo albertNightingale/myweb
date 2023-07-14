@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProjectGrids from './Project/ProjectGrids';
-import ProjectDetailPopUp from './Project/PopUp/';
-import { Project } from '../types';
+import ProjectDetailPopUp from './Project/PopUp';
+import { Project } from '../../types';
 
 export default () => {
   const [popupProject, setPopUpProject] = useState(null as null | Project);

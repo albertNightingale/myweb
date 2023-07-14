@@ -1,6 +1,6 @@
 import React from 'react';
-import experiences, { Experience } from '../../../data/experiences';
-import SectionTitle from '../../../components/SectionTitle';
+import experiences, { Experience } from '../../../../data/experiences';
+import SectionTitle from '../../../SectionTitle';
 import PastExperienceComponent from './PastExperienceComponent';
 
 export default function PastExperienceSection() {

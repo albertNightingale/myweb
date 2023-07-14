@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectBriefing from './ProjectBriefing';
-import useProjects from '../../apihooks/useProjects';
-import { Project } from '../../types';
+import useProjects from '../../../apihooks/useProjects';
+import { Project } from '../../../types';
 
 export default function ProjectGrids({
   popUpProjectSetter,

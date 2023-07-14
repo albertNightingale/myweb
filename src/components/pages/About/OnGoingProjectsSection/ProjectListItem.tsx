@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Project } from '../../../types';
+import { Project } from '../../../../types';
 
 interface onGoingProjectProps {
   project: Project | null;

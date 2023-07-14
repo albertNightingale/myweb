@@ -1,5 +1,5 @@
-import SectionTitle from '../../../components/SectionTitle';
-import recommendationList, { Recommendation } from '../../../data/recommendations';
+import SectionTitle from '../../../SectionTitle';
+import recommendationList, { Recommendation } from '../../../../data/recommendations';
 import { RecommendationCard } from './RecommendationCard';
 
 export default function RecommendationSection() {

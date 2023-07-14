@@ -1,4 +1,4 @@
-import { Recommendation } from '../../../data/recommendations';
+import { Recommendation } from '../../../../data/recommendations';
 
 type PropType = {
   recommendation: Recommendation;

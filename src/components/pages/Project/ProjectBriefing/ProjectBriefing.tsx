@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectSubtitle from './ProjectSubtitle';
 import ProjectDescription from './ProjectDescription';
 import ProjectButton from './ProjectButtons';
-import { Project } from '../../../types';
+import { Project } from '../../../../types';
 
 type ProjectProps = {
   projectSetter: React.Dispatch<React.SetStateAction<null | Project>>;

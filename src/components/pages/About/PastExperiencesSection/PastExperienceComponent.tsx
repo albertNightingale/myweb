@@ -1,6 +1,6 @@
 import React from 'react';
-import { Experience } from '../../../data/experiences';
-import KeyValueContent from '../../../components/KeyValueContent';
+import { Experience } from '../../../../data/experiences';
+import KeyValueContent from '../../../KeyValueContent';
 
 interface pastExperienceComponentProp {
   experience: Experience;
