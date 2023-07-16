@@ -5,11 +5,11 @@ function navPanels() {
   const navItems = ['Project', 'Blog', 'About'];
 
   const listOfNavs = navItems.map((item) => (
-    <button>
-      <Link className="text-white text-3xl align-center" to={`/${item.toLowerCase()}`}>
-        <div className="">{item.toLowerCase()}</div>
+    <div className="px-3">
+      <Link className="text-white text-3xl" to={`/${item.toLowerCase()}`}>
+        {item.toLowerCase()}
       </Link>
-    </button>
+    </div>
   ));
   return listOfNavs;
 }
@@ -17,13 +17,10 @@ function navPanels() {
 export default () => {
   return (
     <div className="flex flex-row justify-between bg-theme0">
-      <div className="flex flex-col basis-1/12">
-        <Link to="/">
-          <img className="w-10 h-10" alt="profile img" src={`${process.env.PUBLIC_URL}/img/profile.JPG`} />
-          <div className="">Albert Liu</div>
-        </Link>
-      </div>
-      <div className="flex flex-row justify-around basis-3/12">{navPanels()}</div>
+      <Link className="flex flex-col" to="/">
+        <img className="w-9 h-fit" alt="profile img" src={`${process.env.PUBLIC_URL}/img/square-profile.JPG`} />
+      </Link>
+      <div className="px-3 flex flex-row">{navPanels()}</div>
     </div>
   );
 };
