@@ -2,7 +2,7 @@ import React from 'react';
 import { Project } from '../../../../types';
 import SectionTitle from '../../../SectionTitle';
 import ProjectListItem from './ProjectListItem';
-import useProjects from '../../../../apihooks/useProjects';
+import { useProjects } from '../../../../apihooks';
 
 function mapOnGoingProjects(projects: Project[]) {
   const projectLists = projects
@@ -21,7 +21,7 @@ export default function OnGoingProjectsSection() {
   const errorComponent = error ? <div>Error: {error.toString()}</div> : <></>;
 
   return (
-    <div className="bg-theme1 pb-3">
+    <div className="bg-theme1 pb-10">
       <SectionTitle sectionName="On Going Projects" />
       {loadingComponent}
       {errorComponent}
