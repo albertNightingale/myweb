@@ -1,19 +1,30 @@
 import React from 'react';
-import { Experience } from '../../../data/experiences';
-import KeyValueContent from '../../../components/KeyValueContent';
+import { Experience } from '../../../../data/experiences';
+import KeyValueContent from '../../../KeyValueContent';
 
 interface pastExperienceComponentProp {
   experience: Experience;
 }
 
 function addKeyValueContents(experience: Experience) {
-  const contents = new Array<JSX.Element>();
-  contents.push(<KeyValueContent styleClass={'pl-3'} fieldName={'Experience Type'} fieldValue={experience.type} />);
-  contents.push(<KeyValueContent styleClass={'pl-3'} fieldName={'Starting Since'} fieldValue={experience.startDate} />);
+  const fieldMap = {
+    startDate: 'Starting Since',
+    type: 'Experience Type',
+  } as any;
   if (experience.endDate) {
-    contents.push(<KeyValueContent styleClass={'pl-3'} fieldName={'Ending At'} fieldValue={experience.endDate} />);
+    fieldMap['endDate'] = 'Ending At';
   }
-  return contents;
+
+  return Object.entries(fieldMap).map(([key, value]) => {
+    return (
+      <KeyValueContent
+        key={key}
+        styleClass={'pl-3'}
+        fieldName={value as string}
+        fieldValue={experience[key as keyof Experience] as string}
+      />
+    );
+  });
 }
 export default function PastExperienceComponent({ experience }: pastExperienceComponentProp) {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Project } from '../../../data/projects';
 
 import PopUpHeader from './PopUpHeader';
 import PopUpContent from './PopUpContent';
+import { Project } from '../../../../types';
 
 interface ProjectDetailProps {
   project: Project;

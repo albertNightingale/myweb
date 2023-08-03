@@ -1,64 +1,26 @@
 import React from 'react';
-import { AppBar, Avatar, Button, Typography, Toolbar, Box, Link } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-class Header extends React.Component {
-  getOtherPanels() {
-    const navItems = ['Project', 'Blog', 'About'];
-    const linkStyle = {
-      textDecoration: 'none',
-      color: 'white',
-    };
-    const listOfNavs = navItems.map((item, index) => (
-      <Button key={item}>
-        <Link href={`/${item.toLowerCase()}`} sx={linkStyle}>
-          <Typography variant="caption">{item.toLowerCase()}</Typography>
-        </Link>
-      </Button>
-    ));
-    return <Box>{listOfNavs}</Box>;
-  }
+function navPanels() {
+  const navItems = ['Project', 'Blog', 'About'];
 
-  getNavBar() {
-    const boxStyle = {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    };
-
-    const linkStyle = {
-      textDecoration: 'none',
-      color: 'white',
-    };
-    return (
-      <Box sx={boxStyle}>
-        <Link href="/" sx={linkStyle}>
-          <Avatar alt="profile img" src={`${process.env.PUBLIC_URL}/img/profile.JPG`} />
-          <Typography component="div">Albert Liu</Typography>
-        </Link>
-      </Box>
-    );
-  }
-
-  render() {
-    const appBarStyle = {
-      position: 'relative',
-      width: '100%',
-      height: '20%',
-    };
-
-    return (
-      <AppBar component="nav" sx={appBarStyle}>
-        <Toolbar
-          sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
-          }}
-        >
-          {this.getNavBar()}
-          {this.getOtherPanels()}
-        </Toolbar>
-      </AppBar>
-    );
-  }
+  const listOfNavs = navItems.map((item) => (
+    <div className="px-3">
+      <Link className="text-white text-3xl" to={`/${item.toLowerCase()}`}>
+        {item.toLowerCase()}
+      </Link>
+    </div>
+  ));
+  return listOfNavs;
 }
-export default Header;
+
+export default () => {
+  return (
+    <div className="flex flex-row justify-between bg-theme0">
+      <Link className="flex flex-col" to="/">
+        <img className="w-9 h-fit" alt="profile img" src={`${process.env.PUBLIC_URL}/img/square-profile.JPG`} />
+      </Link>
+      <div className="px-3 flex flex-row">{navPanels()}</div>
+    </div>
+  );
+};

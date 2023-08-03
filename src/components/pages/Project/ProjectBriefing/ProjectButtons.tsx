@@ -1,5 +1,5 @@
 import React from 'react';
-import { Project } from '../../../data/projects';
+import { Project } from '../../../../types';
 
 interface ProjectButtonProps {
   project: Project;

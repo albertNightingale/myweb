@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import projects, { Project as ProjectType } from '../../../data/projects';
+import { Project } from '../../../../types';
 
 interface onGoingProjectProps {
-  project: ProjectType | null;
+  project: Project | null;
   children?: React.ReactNode; // best, accepts everything React can render
 }
 

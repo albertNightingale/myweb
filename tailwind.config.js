@@ -12,6 +12,9 @@ module.exports = {
       letterSpacing: {
         widest: '0.25em'
       },
+      flexBasis: {
+        '1/50': '2.5%',
+      }
     },
   },
   plugins: [],

@@ -1,10 +1,10 @@
-import SectionTitle from '../../../components/SectionTitle';
-import recommendationList, { Recommendation } from '../../../data/recommendations';
+import SectionTitle from '../../../SectionTitle';
+import recommendationList, { Recommendation } from '../../../../data/recommendations';
 import { RecommendationCard } from './RecommendationCard';
 
 export default function RecommendationSection() {
   const recommendationComponentList = recommendationList.map((rec: Recommendation) => {
-    return <RecommendationCard recommendation={rec} />;
+    return <RecommendationCard key={`${rec.recommender}@${rec.role}@${rec.company}`} recommendation={rec} />;
   });
   return (
     <div className="flex flex-col bg-theme0">
