@@ -7,7 +7,7 @@ async function fetchGithubContribution() {
   const endpointURL = urlJoin(
     `${process.env.REACT_APP_PROTOCOL}://${process.env.REACT_APP_IP}`,
     process.env.REACT_APP_ENV as string,
-    "githubContribution"
+    "githubcontribution"
   );
 
   // console.log(endpointURL);
