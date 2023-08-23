@@ -26,6 +26,7 @@ function getRow(contrib: GitContributionType['contributions'], key: string) {
 }
 
 export default function GitContributionChart({ data }: Props) {
+
   const tableRows = Object.keys(data.contributions).map((key: string) => {
     return (
       <tr className="h-[15px]" key={key}>
