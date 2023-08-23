@@ -8,11 +8,11 @@ interface pastExperienceComponentProp {
 
 function addKeyValueContents(experience: PastExperience) {
   const fieldMap = {
-    startDate: 'Starting Since',
-    type: 'Experience Type',
+    startingDate: 'Starting Since',
+    position: 'Position',
   } as any;
   if (experience) {
-    fieldMap['endDate'] = 'Ending At';
+    fieldMap['endingDate'] = 'Ending At';
   }
 
   return Object.entries(fieldMap).map(([key, value]) => {
